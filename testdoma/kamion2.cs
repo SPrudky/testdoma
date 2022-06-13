@@ -85,6 +85,10 @@ namespace testdoma
         public void Refuel()
         {
             curentfuel += 75;
+            if (curentfuel > 300)
+            {
+                curentfuel = 300;
+            }
         }
     }
 }

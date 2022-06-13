@@ -9,16 +9,16 @@
     <Grid>
 
 
-        <TextBox x:Name="txtbox1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="364" FontSize="16" Text="Kamion1" />
-        <Button x:Name="GO" Content="GO" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top" Height="45" Width="70" Click="Button_Click" FontSize="18"/>
-        <Button x:Name="refuel" Content="Refuel" HorizontalAlignment="Left" Margin="97,379,0,0" VerticalAlignment="Top" Height="45" Width="92" FontSize="18" Click="refuel_Click"/>
-        <Button x:Name="load" Content="Load" HorizontalAlignment="Left" Margin="205,380,0,0" VerticalAlignment="Top" Height="44" Width="78" FontSize="18" Click="load_Click"/>
-        <Button x:Name="unload" Content="Unload" Margin="311,380,400,10" FontSize="18" Click="unload_Click"/>
-        <TextBox x:Name="txtbox2" HorizontalAlignment="Left" Margin="405,10,0,0" Text="Kamion2" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" Height="364" FontSize="16"/>
-        <Button x:Name="go2" Content="GO" HorizontalAlignment="Left" Margin="405,380,0,0" VerticalAlignment="Top" Height="44" Width="74" FontSize="16" Click="go2_Click"/>
-        <Button x:Name="refuel2" Content="Refuel" HorizontalAlignment="Left" Margin="510,380,0,0" VerticalAlignment="Top" Height="44" Width="74" FontSize="16" Click="refuel2_Click"/>
-        <Button x:Name="Load2" Content="Load" HorizontalAlignment="Left" Margin="615,380,0,0" VerticalAlignment="Top" Height="44" Width="68" FontSize="16" Click="Load2_Click"/>
-        <Button x:Name="unload2" Content="Unload" HorizontalAlignment="Left" Margin="706,380,0,0" VerticalAlignment="Top" Height="44" Width="84" Click="unload2_Click"/>
+        <TextBox x:Name="txtbox1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="336" FontSize="16" Text="Kamion1" />
+        <Button x:Name="GO" Content="GO" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Height="45" Width="70" Click="Button_Click" FontSize="18"/>
+        <Button x:Name="refuel" Content="Refuel" HorizontalAlignment="Left" Margin="97,358,0,0" VerticalAlignment="Top" Height="43" Width="92" FontSize="18" Click="refuel_Click"/>
+        <Button x:Name="load" Content="Load" HorizontalAlignment="Left" Margin="205,358,0,0" VerticalAlignment="Top" Height="44" Width="78" FontSize="18" Click="load_Click"/>
+        <Button x:Name="unload" Content="Unload" Margin="299,357,412,33" FontSize="18" Click="unload_Click"/>
+        <TextBox x:Name="txtbox2" HorizontalAlignment="Left" Margin="405,10,0,0" Text="Kamion2" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" Height="336" FontSize="16"/>
+        <Button x:Name="go2" Content="GO" HorizontalAlignment="Left" Margin="405,358,0,0" VerticalAlignment="Top" Height="44" Width="74" FontSize="16" Click="go2_Click"/>
+        <Button x:Name="refuel2" Content="Refuel" HorizontalAlignment="Left" Margin="495,358,0,0" VerticalAlignment="Top" Height="44" Width="74" FontSize="16" Click="refuel2_Click"/>
+        <Button x:Name="Load2" Content="Load" HorizontalAlignment="Left" Margin="598,358,0,0" VerticalAlignment="Top" Height="44" Width="68" FontSize="16" Click="Load2_Click"/>
+        <Button x:Name="unload2" Content="Unload" HorizontalAlignment="Left" Margin="683,358,0,0" VerticalAlignment="Top" Height="43" Width="84" Click="unload2_Click"/>
 
     </Grid>
 </Window>
