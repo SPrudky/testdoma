@@ -21,20 +21,36 @@ namespace testdoma
     public partial class MainWindow : Window
     {
         Kamion kamion1;
+        kamion2 kamion;
         public MainWindow()
         {
             InitializeComponent();
             kamion1 = new Kamion();
+
+           
             Showkamion(kamion1, txtbox1);
+            kamion = new kamion2();
+            Showkamion2(kamion, txtbox2);
+            
+            
         }
-        public void Showkamion(Kamion vehicle,TextBox text)
+        public void Showkamion2(kamion2 vehicle, TextBox texbox)
         {
-            text.Text = $"Maxcarry: {vehicle.maxcarry}\n";
-            text.Text = $"Maxfuel: {vehicle.maxfuel}\n";
-            text.Text = $"Curentcarry:{vehicle.curentcarry}\n";
-            text.Text = $"Curentfuel:{vehicle.curentfuel}\n";
-            text.Text = $"Consum:{vehicle.consum}\n";
-            text.Text = $"Distance:{vehicle.distance}\n";
+           texbox.Text = $"Kamion2:Maxcarry: {vehicle.maxcarry}\n";
+            texbox.Text = $"Kamion2: Maxfuel: {vehicle.maxfuel}\n";
+            texbox.Text += $"          Curentcarry:{vehicle.curentcarry}\n";
+            texbox.Text += $"          Curentfuel:{vehicle.curentfuel}\n";
+            texbox.Text += $"          Consum:{vehicle.consum}\n";
+            texbox.Text += $"          Distance:{vehicle.distance}\n";
+        }
+        public void Showkamion(Kamion vehicle,TextBox textbox)
+        {
+            textbox.Text = $"Kamion1:Maxcarry: {vehicle.maxcarry}\n";
+            textbox.Text = $"Kamion1: Maxfuel: {vehicle.maxfuel}\n";
+            textbox.Text += $"          Curentcarry:{vehicle.curentcarry}\n";
+            textbox.Text += $"          Curentfuel:{vehicle.curentfuel}\n";
+            textbox.Text += $"          Consum:{vehicle.consum}\n";
+            textbox.Text += $"          Distance:{vehicle.distance}\n";
 
 
         }
@@ -62,6 +78,31 @@ namespace testdoma
         {
             kamion1.Unloadcargo();
             Showkamion(kamion1, txtbox1);
+        }
+
+        private void go2_Click(object sender, RoutedEventArgs e)
+        {
+            kamion.go();
+            kamion.Consum();
+            Showkamion2(kamion, txtbox2);
+        }
+
+        private void refuel2_Click(object sender, RoutedEventArgs e)
+        {
+            kamion.Refuel();
+            Showkamion2(kamion, txtbox2);
+        }
+
+        private void Load2_Click(object sender, RoutedEventArgs e)
+        {
+            kamion.loadcargo();
+            Showkamion2(kamion, txtbox2);
+        }
+
+        private void unload2_Click(object sender, RoutedEventArgs e)
+        {
+            kamion.unloadcargo();
+            Showkamion2(kamion, txtbox2);
         }
     }
 }

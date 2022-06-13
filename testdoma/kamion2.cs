@@ -4,7 +4,7 @@ using System.Text;
 
 namespace testdoma
 {
-    public class Kamion
+    public class kamion2
     {
         public int maxcarry { get; set; }
         public int maxfuel { get; set; }
@@ -13,63 +13,59 @@ namespace testdoma
         public int curentcarry { get; set; }
         public int curentfuel { get; set; }
 
-        public Kamion()
+        public kamion2()
         {
-            maxcarry = 2000;
+
+            maxcarry = 3000;
             curentcarry = 0;
-            maxfuel = 250;
-            curentfuel = 250;
+            maxfuel = 300;
+            curentfuel = 300;
             distance = 0;
             consum = 0;
         }
-        public void Loadcargo()
+        public void loadcargo()
         {
-            if (curentcarry == 2000)
+            if (curentcarry==3000)
             {
-                curentcarry = 2000;
+                curentcarry = 3000;
             }
-            else if (curentcarry < 2000)
+            else if (curentcarry < 3000)
             {
                 curentcarry += 50;
             }
             
         }
-        public void Unloadcargo()
+        public void unloadcargo()
         {
-            if (curentcarry == 0)
+            if(curentcarry < 0)
             {
                 curentcarry = 0;
             }
-            else if (curentcarry > 0)
-            {
-                curentcarry = 0;
-            }
+
+            
         }
-        public void Go()
+        public void go()
         {
             if (curentfuel == 0)
             {
                 distance += 0;
                 curentfuel = 0;
-                    
             }
             else if (curentfuel < 0)
             {
                 distance += 0;
                 curentfuel = 0;
             }
-            else if (curentcarry > 500)
+            else if (curentcarry > 1500)
             {
+                distance += 20;
+                curentfuel -= 40;
+            }
+            else if (curentcarry < 1500)
+            {
+                distance += 20;
                 curentfuel -= 30;
-                distance += 20;
             }
-            else if (curentcarry < 500)
-            {
-                curentfuel -= 20;
-                distance += 20;
-            }
-
-            
         }
         public void Consum()
         {
@@ -77,18 +73,18 @@ namespace testdoma
             {
                 consum = 0;
             }
-            else if (curentcarry > 500)
+            else if (curentcarry > 1500)
+            {
+                consum = 40;
+            }
+            else if (curentcarry < 500)
             {
                 consum = 30;
             }
-            else if (curentcarry<500)
-            {
-                consum = 20;
-            }
-        } 
+        }
         public void Refuel()
         {
-            curentfuel += 50;
+            curentfuel += 75;
         }
     }
 }
